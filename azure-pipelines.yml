@@ -1,0 +1,17 @@
+name: prabhatpipeline11
+
+trigger: none
+pool: prabhatpool11
+stages:
+  - stage: Terraformstage
+    displayName: Terraform stage prabhat
+    jobs:
+      - job: Terraformjob
+        displayName: Terraform job Prabhat
+        steps: 
+        - task: TerraformInstaller@1
+          displayName: Terraform install
+          inputs:
+            terraformVersion: 'latest'
+          
+
